@@ -1,0 +1,46 @@
+<html>
+<body>
+  <h3>The code shows a timer</h3>
+   <form>
+   Hours:<input type="text" id="inphrs">
+   Minutes:<input type="text" id="inpmins">
+   Seconds:<input type="text" id="inpsecs">
+   <button onclick="takeinput()">press</button>
+   </form>
+     
+        <script>
+		   function takeinput()
+		            { var hr,min,sc,total;
+					      hr=document.getElementById("inphrs").value;
+						  min=document.getElementById("inpmins").value;
+						   sc=document.getElementById("inpsecs").value;
+						  hr=hr*1;   min=min*1;  sc=sc*1;
+						  
+						  total=hr*3600+min*60+sc;
+						  
+						  setInterval(time,1000);
+					 }
+					     function time()
+						          { var hours,mintutes,seconds;
+								        
+										 if(total>0)
+									  {
+										hours=(total-(total%3600))/3600;
+										seconds=total%60;
+										minutes= ((total%3600)-(total%60))/60;
+				
+                                          <p id="ihr"> </p>	
+										  <p id="imin"> </p>	
+                                         <p id="isec"> </p>
+										 
+										document.getElementById("ihr").innrtHTML=hours+" hrs  ";
+										document.getElementById("imin").innrtHTML=hours+" mins  ";
+										document.getElementById("isec").innrtHTML=hours+" secs  ";
+										      total--;
+									  } 
+								  } 
+ 
+        </script>
+ </body>
+</html> 
+			
